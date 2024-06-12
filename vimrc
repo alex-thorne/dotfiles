@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'thoughtbot/pick.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'https://github.com/tpope/vim-fugitive'  " git wrapper
 
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
