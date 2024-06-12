@@ -1,0 +1,33 @@
+# Ignore system and editor files
+.DS_Store
+*.swp
+*.swo
+*.bak
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore log files
+*.log
+
+# Ignore compiled files
+*.o
+*.pyc
+*.class
+
+# Ignore dependency directories
+/node_modules
+/vendor
+
+# Ignore sensitive or private information
+secrets.txt
+config.ini
+
+# Ignore build artifacts
+/build
+/dist
+
+# Ignore IDE-specific files
+.idea
+.vscode

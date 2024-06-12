@@ -10,10 +10,9 @@ alias df='df -h'
 alias du='du -h -d 2'l
 alias pathdebug='echo -e ${PATH//:/\\n}'
 
-
-
 #vim
 alias rvim='sudoedit' #root vim: use user's vimrc when editing as root
+alias :q='exit'
 
 #dotfile editing
 alias vimrc='vim ~/.vimrc'
