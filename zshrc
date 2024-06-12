@@ -1,7 +1,6 @@
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
-#export ZSH=$HOME/.oh-my-zsh
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
 plugins=(
@@ -37,6 +36,14 @@ export NVM_DIR="{{ nvm_root }}"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source $ZSH/oh-my-zsh.sh
-source ~/.bash_aliases  
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+if [ -f $ZSH/oh-my-zsh.sh ]; then
+    . $ZSH/oh-my-zsh.sh
+fi
+
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

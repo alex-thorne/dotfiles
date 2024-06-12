@@ -4,9 +4,16 @@ alias ll='ls -l'
 alias vi='vim'
 alias cp='cp -v'
 alias home="cd ~ && echo '$PWD'"
+alias psa="ps aux"
+alias psg="ps aux | grep "
+alias df='df -h'
+alias du='du -h -d 2'l
+alias pathdebug='echo -e ${PATH//:/\\n}'
 
-#root vim: use user's vimrc when editing as root
-alias rvim='sudoedit'
+
+
+#vim
+alias rvim='sudoedit' #root vim: use user's vimrc when editing as root
 
 #dotfile editing
 alias vimrc='vim ~/.vimrc'
@@ -14,25 +21,32 @@ alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
 alias aliases='vim ~/.bash_aliases'
 
+# Minikube
+alias mk='minikube'
+alias mkstart='minikube start && eval $(minikube docker-env)'
+alias mkstop='minikube stop && eval $(docker-machine env -u)'
+alias mkenv='eval $(minikube docker-env)'
+alias dockerenv='eval $(docker-machine env -u)'
+
 #Custom Functions
 mkdircd() {
   mkdir -p -- "$1" && cd -P -- "$1"
   }
 
 installpackage () {
-  sudo apt-get update
-  sudo apt-get -y upgrade
-  sudo apt-get install $1
+  sudo apt update
+  sudo apt -y upgrade
+  sudo apt install $1
   installdate=$(date +"%Y-%m-%d")
   echo -e "$installdate Installed package $1" >> /path/to/changelog.txt
-  sudo apt-get autoremove
+  sudo apt autoremove
   }
 
 removepackage () {
-  sudo apt-get remove $1
+  sudo apt remove $1
   removedate=$(date +"%Y-%m-%d")
   echo -e "$removedate Removed package $1" >> /path/to/changelog.txt
-  sudo apt-get autoremove
+  sudo apt autoremove
   }
 
 extract () {
@@ -49,7 +63,7 @@ extract () {
         *.zip)       unzip $1       ;;
         *.Z)         uncompress $1  ;;
         *.7z)        7z x $1        ;;
-        *)           echo "don't know how to extract '$1'..." ;;
+        *)           echo "unsupport filetype: '$1'..." ;;
     esac
   else
     echo "'$1' is not a valid file!"
@@ -58,6 +72,3 @@ extract () {
 
 # launch app and immediately disown, allowing terminal to be closed
 function daemonize() { nohup $@ >/dev/null 2>&1 & }
-
-
-

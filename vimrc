@@ -1,13 +1,10 @@
-{% raw %}
 " Vundle {{{
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible            " required
+filetype off                " required 
 
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -15,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugins (Keep between vundle#begin/end)
 Plugin 'thoughtbot/pick.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -201,7 +199,7 @@ endfunction
 " Backups {{{
 set backup 
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
-set backupskip=/tmp/*,/private/tmp/* 
+set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 set writebackup
 " }}}
@@ -257,4 +255,3 @@ function! NumberToggle()
 endfunc
 " }}}
 " vim:foldmethod=marker:foldlevel=0
-{% endraw %}
