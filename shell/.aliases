@@ -21,6 +21,7 @@ alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
 alias aliases='vim ~/.bash_aliases'
 alias stowall='~/.dotfiles/stowall.sh'
+alias dotfiles='cd ~/.dotfiles'
 
 # Minikube
 alias mk='minikube'
