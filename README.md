@@ -3,9 +3,10 @@ My current approach to managing dotfiles. Compliments my ansible based developme
 
 ## Dependancies
 1. Stow 
-    [Stow](https://www.gnu.org/software/stow/) is a popular tool for managing dotfiles. It helps you symlink your dotfiles to the appropriate locations in your home directory. To install Stow, you can use the following commands:
 
-    For more information on how to use Stow, you can refer to its [official documentation](https://www.gnu.org/software/stow/manual/stow.html).
+    [Stow](https://www.gnu.org/software/stow/) is a popular tool for managing dotfiles. It helps you symlink your dotfiles to the appropriate locations in your home directory. 
+
+    For more information on how to use Stow, refer to its [official documentation](https://www.gnu.org/software/stow/manual/stow.html).
 
 
 ## Usage
@@ -13,26 +14,20 @@ My current approach to managing dotfiles. Compliments my ansible based developme
 ```bash
 git clone git@github.com:alex-thorne/dotfiles.git ~/.dotfiles
 ```
-2. Symlink files from `dotfiles` repository to user `$HOME` using Stow* 
+2. Run `install.sh` to adopt dotfiles from `dotfiles` repository to user `$HOME`. (`stow --adopt` overwrites any existing files! Move/backup existing dotfiles in your user `$HOME` first if needed)
 ```bash
-stow git
-stow vim
-stow zsh
+cd ~/.dotfiles
+chmod +x ./install.sh
+./install.sh
 ```
 
 ## Notes
-1. Stowing a file:
-```bash
-alex@computer:~/.dotfiles$ stow vim
-```
+
+Stow tree structure (`->` indicates created symlink)
 ```noformat
 /Users/alex
 ├── .dotfiles
 │   ├── vim
 │   │   └── .vimrc
 ├── .vimrc -> .dotfiles/vim/.vimrc
-```
-2. 
-```bash
-./stowall
 ```
