@@ -1,0 +1,10 @@
+[user]
+	signingkey = 87A2FA86B951F216
+	email = 19760992+alex-thorne@users.noreply.github.com
+	name = Alex Thorne
+[commit]
+	gpgsign = true
+[status]
+	submoduleSummary = True
+[init]
+	defaultBranch = main

@@ -8,17 +8,19 @@ alias psa="ps aux"
 alias psg="ps aux | grep "
 alias df='df -h'
 alias du='du -h -d 2'l
-alias pathdebug='echo -e ${PATH//:/\\n}'
+alias path='echo -e ${PATH//:/\\n}'
+#alias path='echo $PATH | tr -s ":" "\n"''
 
 #vim
 alias rvim='sudoedit' #root vim: use user's vimrc when editing as root
 alias :q='exit'
 
-#dotfile editing
+#dotfile stuff
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
 alias aliases='vim ~/.bash_aliases'
+alias stowall='~/.dotfiles/stowall.sh'
 
 # Minikube
 alias mk='minikube'
