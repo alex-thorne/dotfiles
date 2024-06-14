@@ -1,4 +1,4 @@
-#generic ui stuff
+# generic ui stuff
 alias la='ls -A'
 alias ll='ls -l'
 alias vi='vim'
@@ -9,7 +9,15 @@ alias psg="ps aux | grep "
 alias df='df -h'
 alias du='du -h -d 2'l
 alias path='echo -e ${PATH//:/\\n}'
-#alias path='echo $PATH | tr -s ":" "\n"''
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git checkout'
+alias gcm='git checkout master'
+alias glog='git log --decorate --oneline --graph'
+alias gloga='git log --all --decorate --oneline --graph'
+alias gst='git status'
+alias gca='git commit --amend'
+alias k='kubectl'
 
 #vim
 alias rvim='sudoedit' #root vim: use user's vimrc when editing as root
