@@ -31,3 +31,16 @@ yarn.lock
 secrets.txt
 credentials.json
 private.key
+.secrets/
+.aws/credentials
+.npmrc
+.netrc
+.ssh/
+.gnupg/
+.private/
+.logs/
+.env
+.local/
+*.bak
+*.tmp
+*.swp

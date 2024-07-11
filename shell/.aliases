@@ -18,6 +18,7 @@ alias gloga='git log --all --decorate --oneline --graph'
 alias gst='git status'
 alias gca='git commit --amend'
 alias k='kubectl'
+alias kga='kubectl get all'
 
 #vim
 alias rvim='sudoedit' #root vim: use user's vimrc when editing as root
@@ -28,7 +29,6 @@ alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
 alias aliases='vim ~/.bash_aliases'
-alias stowall='~/.dotfiles/stowall.sh'
 alias dotfiles='cd ~/.dotfiles'
 
 # Minikube

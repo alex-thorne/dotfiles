@@ -1,3 +1,4 @@
+stow --adopt --verbose .secrets
 stow --adopt --verbose bash
 stow --adopt --verbose git
 stow --adopt --verbose shell
