@@ -7,7 +7,10 @@ ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #SOLARIZED_THEME="dark"
 
-plugins=(git git-extras command-not-found compleat dirhistory history lol mvn pip python screen sudo web-search wd asdf)
+plugins=(git git-extras command-not-found compleat dirhistory history lol mvn pip python screen sudo web-search wd asdf terraform colored-man-pages)
+
+# Report CPU usage for commands running longer than 10 seconds
+REPORTTIME=10
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,6 +24,6 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-if [ =f ~/.secrets/.private_aliases ]; then
+if [ -f ~/.secrets/.private_aliases ]; then
     . ~/.secrets/.private_aliases
 fi
