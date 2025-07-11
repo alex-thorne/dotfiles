@@ -14,7 +14,7 @@ My current approach to managing dotfiles.
     git clone git@github.com:alex-thorne/dotfiles.git ~/.dotfiles
     ```
 
-2. Run `install.sh` to adopt dotfiles from `dotfiles` repository to user `$HOME`. (`stow --adopt` overwrites any existing files! Move/backup existing dotfiles in your user `$HOME` first if needed)
+2. Run `install.sh` to adopt dotfiles from `dotfiles` repository to user `$HOME`.
 
     ```bash
     cd ~/.dotfiles
@@ -33,3 +33,6 @@ Stow tree structure (`->` indicates created symlink)
 │   │   └── .vimrc
 ├── .vimrc -> .dotfiles/vim/.vimrc
 ```
+
+Install script passes `--dotfiles` stow arg, replacing "dot-..." naming convention.
+By default stow will not overwrite existing files found with attempted packages to be stowed. Conflicts should be resolved manually via backup/move/delete or `--adopt`.
