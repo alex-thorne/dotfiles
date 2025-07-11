@@ -8,3 +8,5 @@
 	submoduleSummary = True
 [init]
 	defaultBranch = main
+[credential]
+	helper = osxkeychain
